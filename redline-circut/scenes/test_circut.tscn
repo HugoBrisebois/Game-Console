@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ja8puwgo1l1"]
+
+[ext_resource type="PackedScene" uid="uid://d3kehw1nbwdhf" path="res://scenes/player_car.tscn" id="1_e6xyv"]
+
+[node name="test circut" type="Node3D"]
+
+[node name="player car" parent="." instance=ExtResource("1_e6xyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24224, 0.391237, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 24.6001, 0)
+light_energy = 16.0
+light_angular_distance = 90.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08682, -0.0476947, 16.1425)
+use_collision = true
+size = Vector3(25.918, 0.285645, 50.3124)

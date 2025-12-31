@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gaq7sdgb3rr0"
+path="res://.godot/imported/car-pickup-blue.obj-29ef47874249f0921b6719c979f4659c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-pickup-blue.obj-29ef47874249f0921b6719c979f4659c.mesh"]
+
+source_file="res://assets/obj/car-pickup-blue.obj"
+dest_files=["res://.godot/imported/car-pickup-blue.obj-29ef47874249f0921b6719c979f4659c.mesh", "res://.godot/imported/car-pickup-blue.obj-29ef47874249f0921b6719c979f4659c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
