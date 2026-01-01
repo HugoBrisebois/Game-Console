@@ -16,7 +16,7 @@ shape = SubResource("BoxShape3D_al8p5")
 
 [node name="FrontLeftWheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.46959, 0.160923, 0.192213)
-use_as_steering = true
+use_as_traction = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
 damping_compression = 5.0
@@ -24,7 +24,7 @@ damping_relaxation = 3.0
 
 [node name="FrontRightWheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.329317, 0.154946, 0.214929)
-use_as_steering = true
+use_as_traction = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
 damping_compression = 5.0
@@ -32,7 +32,9 @@ damping_relaxation = 3.0
 
 [node name="RearLeftWheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.47782, 0.185271, -1.01696)
-use_as_traction = true
+engine_force = 124.12
+brake = 23.27
+use_as_steering = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
 damping_compression = 5.0
@@ -40,17 +42,55 @@ damping_relaxation = 3.0
 
 [node name="RearRightWheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.185918, 0.106591, -1.05726)
-use_as_traction = true
+engine_force = 124.12
+brake = 23.27
+use_as_steering = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
 damping_compression = 5.0
 damping_relaxation = 3.0
 
 [node name="Car-coupe-blue" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0569901, 0, -0.391131)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0569901, 0, -0.391131)
 mesh = ExtResource("2_v64uw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0884601, 0.64843, -0.439253)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.063941, 1.05551, 0.234091)
 fov = 44.5
 script = ExtResource("3_t5w8p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_right = 1153.0
+offset_bottom = 645.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+color = Color(0.489622, 0.489622, 0.489622, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/ColorRect"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 60.0
+offset_right = 111.0
+offset_bottom = 83.0
+text = "Position: "
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+color = Color(0.381703, 0.381703, 0.381703, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1022.0
+offset_top = 579.0
+offset_right = 1126.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "speed: "

@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 # Vehicle Stats - Tweak these for different car feels
-@export var max_engine_force = 200.0
+@export var max_engine_force = 500.0
 @export var max_brake_force = 8.0
 @export var max_steer_angle = 0.5  # In radians, ~28 degrees
 @export var steer_speed = 3.0  # How fast steering responds
@@ -26,15 +26,19 @@ var brake_force_value = 0.0
 
 func _ready():
 	# Set up basic physics properties
-	mass = 1200.0  # kg, typical car weight
+	mass = 650.0  # kg, typical car weight
 	center_of_mass_mode = RigidBody3D.CENTER_OF_MASS_MODE_CUSTOM
 	center_of_mass = Vector3(0, -0.3, 0)  # Lower center of mass for stability
+
 
 func _physics_process(delta):
 	# Get input
 	var throttle = Input.get_axis("brake", "accelerate")  # Forward/Backward
 	var steer_input = Input.get_axis("steer_right", "steer_left")
 	var handbrake = Input.is_action_pressed("handbrake")
+	engine_force = engine_force_value
+	print("Engine Force: ", engine_force, " | Brake: ", brake)
+	# DEBUG: Print throttle input
 	
 	# Smooth steering
 	var target_steer = steer_input * max_steer_angle

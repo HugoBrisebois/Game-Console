@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4ja8puwgo1l1"]
+[gd_scene load_steps=9 format=3 uid="uid://c4ja8puwgo1l1"]
 
 [ext_resource type="PackedScene" uid="uid://d3kehw1nbwdhf" path="res://scenes/player_car.tscn" id="1_e6xyv"]
+[ext_resource type="PackedScene" uid="uid://bib6xiuagqaq3" path="res://assets/Tree_2.fbx" id="2_al8p5"]
+[ext_resource type="ArrayMesh" uid="uid://d3sb8hix4qf2i" path="res://assets/track.obj" id="3_oogix"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al8p5"]
+vertex_color_is_srgb = true
+albedo_color = Color(5.72756e-06, 0.875746, 0.176498, 1)
+
+[sub_resource type="Skin" id="Skin_xd2uq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvipn"]
+albedo_color = Color(0.303233, 0.303233, 0.303233, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oogix"]
+size = Vector3(167.795, 0.506836, 5.28412)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xd2uq"]
+size = Vector3(163.88, 0.530396, 124.13)
 
 [node name="test circut" type="Node3D"]
 
 [node name="player car" parent="." instance=ExtResource("1_e6xyv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24224, 0.391237, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24224, 1.27982, -4.13685)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 24.6001, 0)
@@ -13,6 +30,26 @@ light_energy = 16.0
 light_angular_distance = 90.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08682, -0.0476947, 16.1425)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32293, 0.997377, 11.9518)
 use_collision = true
-size = Vector3(25.918, 0.285645, 50.3124)
+size = Vector3(168.039, 0.285645, 50.3124)
+material = SubResource("StandardMaterial3D_al8p5")
+
+[node name="Tree_2" parent="." instance=ExtResource("2_al8p5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.7599)
+
+[node name="Track" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9913, 1.20543, -12.8549)
+mesh = ExtResource("3_oogix")
+skin = SubResource("Skin_xd2uq")
+surface_material_override/0 = SubResource("StandardMaterial3D_nvipn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Track"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Track/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4487, -0.246582, -1.63333)
+shape = SubResource("BoxShape3D_oogix")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Track/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4946, -0.234802, -65.2189)
+shape = SubResource("BoxShape3D_xd2uq")
