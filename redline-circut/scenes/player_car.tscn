@@ -11,11 +11,11 @@ size = Vector3(0.889252, 0.614136, 2.02869)
 script = ExtResource("1_ir7uv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.992959, 0.375794, -0.383118)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0606791, 0.375794, -0.383118)
 shape = SubResource("BoxShape3D_al8p5")
 
 [node name="FrontLeftWheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.40187, 0.160923, 0.192213)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.46959, 0.160923, 0.192213)
 use_as_steering = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
@@ -23,7 +23,7 @@ damping_compression = 5.0
 damping_relaxation = 3.0
 
 [node name="FrontRightWheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.602963, 0.154946, 0.214929)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.329317, 0.154946, 0.214929)
 use_as_steering = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
@@ -31,7 +31,7 @@ damping_compression = 5.0
 damping_relaxation = 3.0
 
 [node name="RearLeftWheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.4101, 0.185271, -1.01696)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.47782, 0.185271, -1.01696)
 use_as_traction = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
@@ -39,7 +39,7 @@ damping_compression = 5.0
 damping_relaxation = 3.0
 
 [node name="RearRightWheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.746362, 0.106591, -1.05726)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.185918, 0.106591, -1.05726)
 use_as_traction = true
 wheel_radius = 0.2
 suspension_stiffness = 80.0
@@ -47,10 +47,10 @@ damping_compression = 5.0
 damping_relaxation = 3.0
 
 [node name="Car-coupe-blue" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98927, 0, -0.391131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0569901, 0, -0.391131)
 mesh = ExtResource("2_v64uw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.02074, 0.64843, -0.439253)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0884601, 0.64843, -0.439253)
 fov = 44.5
 script = ExtResource("3_t5w8p")
