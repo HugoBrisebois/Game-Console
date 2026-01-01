@@ -1,3 +1,54 @@
-[gd_scene format=3 uid="uid://fbaqv2xvx8rb"]
+[gd_scene load_steps=4 format=3 uid="uid://fbaqv2xvx8rb"]
+
+[ext_resource type="Script" uid="uid://brr0ebpb1v8wl" path="res://scripts/opponent.gd" id="1_ha0xr"]
+[ext_resource type="ArrayMesh" uid="uid://c4f6vtum4vnk2" path="res://assets/obj/car-coupe-citrus.obj" id="2_ha0xr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w8tlm"]
+size = Vector3(0.889252, 0.614136, 2.02869)
 
 [node name="opponent" type="VehicleBody3D"]
+script = ExtResource("1_ha0xr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0606791, 0.375794, -0.383118)
+shape = SubResource("BoxShape3D_w8tlm")
+
+[node name="FrontLeftWheel" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.46959, 0.160923, 0.192213)
+use_as_traction = true
+wheel_radius = 0.2
+suspension_stiffness = 80.0
+damping_compression = 5.0
+damping_relaxation = 3.0
+
+[node name="FrontRightWheel" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.329317, 0.154946, 0.214929)
+use_as_traction = true
+wheel_radius = 0.2
+suspension_stiffness = 80.0
+damping_compression = 5.0
+damping_relaxation = 3.0
+
+[node name="RearLeftWheel" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.47782, 0.185271, -1.01696)
+engine_force = 124.12
+brake = 23.27
+use_as_steering = true
+wheel_radius = 0.2
+suspension_stiffness = 80.0
+damping_compression = 5.0
+damping_relaxation = 3.0
+
+[node name="RearRightWheel" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.185918, 0.106591, -1.05726)
+engine_force = 124.12
+brake = 23.27
+use_as_steering = true
+wheel_radius = 0.2
+suspension_stiffness = 80.0
+damping_compression = 5.0
+damping_relaxation = 3.0
+
+[node name="Car-coupe-citrus" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0083952, 0, -0.380351)
+mesh = ExtResource("2_ha0xr")

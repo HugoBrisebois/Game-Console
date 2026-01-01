@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3kehw1nbwdhf" path="res://scenes/player_car.tscn" id="1_e6xyv"]
 [ext_resource type="PackedScene" uid="uid://bib6xiuagqaq3" path="res://assets/Tree_2.fbx" id="2_al8p5"]
-[ext_resource type="ArrayMesh" uid="uid://d3sb8hix4qf2i" path="res://assets/track.obj" id="3_oogix"]
+[ext_resource type="ArrayMesh" uid="uid://bdhpwdwrb3agt" path="res://assets/track.obj" id="3_oogix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al8p5"]
 vertex_color_is_srgb = true
@@ -10,8 +10,8 @@ albedo_color = Color(5.72756e-06, 0.875746, 0.176498, 1)
 
 [sub_resource type="Skin" id="Skin_xd2uq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvipn"]
-albedo_color = Color(0.303233, 0.303233, 0.303233, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oogix"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oogix"]
 size = Vector3(167.795, 0.506836, 5.28412)
@@ -42,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.7599)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9913, 1.20543, -12.8549)
 mesh = ExtResource("3_oogix")
 skin = SubResource("Skin_xd2uq")
-surface_material_override/0 = SubResource("StandardMaterial3D_nvipn")
+surface_material_override/0 = SubResource("StandardMaterial3D_oogix")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Track"]
 
