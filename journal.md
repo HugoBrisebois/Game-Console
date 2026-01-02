@@ -11,4 +11,9 @@ time spent: 53min
 
 I got started on fixing the car movements but i dont know if i will be able to fix it for now, and i am also working on making the first track and i spent too much time on it and it doesn't even work properly, so i chose to make it in godot it self which will be a challenge but that is ok.
 
-total time spent up to date: 2h 27min 
+total time spent up to date: 2h 14min 
+
+# Jan. 
+
+
+total time spent up to date: 3h 14min 
